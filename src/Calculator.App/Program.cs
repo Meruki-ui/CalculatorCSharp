@@ -7,9 +7,21 @@
             bool keepGoing = true;
             while (keepGoing)
             {
-                 //main program here
+                //main program here
                 ShowMenu();
-                keepGoing = false;         
+
+                if (!TryReadNumber("Option: ", out double choice)) return;
+
+                switch (choice)
+                {
+                   case 1: HandleAddit(); break;
+                   case 2: HandleSubt(); break;
+                   case 3: HandleMult(); break;
+                   case 4: HandleDiv(); break;
+                   case 0: keepGoing = false; break;  
+                   default: Console.WriteLine("Invalid option, type a valid option."); break; 
+                }
+         
             }
   
         }
@@ -39,6 +51,35 @@
                         Console.WriteLine("Invalid Input. Type a number or 'q' to quit.");                    
                     }
             }
-        } 
+        }
+
+        static void ShowResult(double result)
+        {
+            Console.WriteLine($"The result is: {result}");
+        }
+
+        static void HandleAddit()
+        {
+            if (!TryReadNumber("Type first number: ", out double a)) return;
+            if (!TryReadNumber("Type second number: ", out double b)) return;
+
+            double result = a + b;
+            ShowResult(result);
+        }
+
+        static void HandleSubt()
+        {
+            Console.WriteLine("Still to be implemented.");
+        }
+
+        static void HandleMult()
+        {
+            Console.WriteLine("Still to be implemented.");
+        }
+
+        static void HandleDiv()
+        {
+            Console.WriteLine("Still to be implemented.");
+        }
     }
 }

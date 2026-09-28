@@ -3,8 +3,8 @@
 
 [x] Menu with options and exit
 [x] Read user inputs
-[] Working options in the menu
-[] sum
+[x] Working options in the menu
+[x] sum
 [] subtraction
 [] multiplication
 [] division
