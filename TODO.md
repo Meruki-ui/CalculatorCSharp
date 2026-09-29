@@ -8,7 +8,7 @@
 [x] subtraction
 [x] multiplication
 [x] division
-[] history of operations
+[x] history of operations
 
 ## Post MVP
 [] square root operation
