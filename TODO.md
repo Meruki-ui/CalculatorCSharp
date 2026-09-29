@@ -6,8 +6,8 @@
 [x] Working options in the menu
 [x] sum
 [x] subtraction
-[] multiplication
-[] division
+[x] multiplication
+[x] division
 [] history of operations
 
 ## Post MVP

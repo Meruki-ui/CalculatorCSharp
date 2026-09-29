@@ -87,7 +87,11 @@
 
         static void HandleDiv()
         {
-            Console.WriteLine("Still to be implemented.");
+            if (!TryReadNumber("Type first number: ", out double a)) return;
+            if (!TryReadNumber("Type second number: ", out double b)) return;
+
+            double result = a / b;
+            ShowResult(result);
         }
     }
 }
