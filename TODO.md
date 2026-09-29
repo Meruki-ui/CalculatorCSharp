@@ -5,7 +5,7 @@
 [x] Read user inputs
 [x] Working options in the menu
 [x] sum
-[] subtraction
+[x] subtraction
 [] multiplication
 [] division
 [] history of operations
