@@ -20,7 +20,8 @@
                    case 3: HandleMult(history); break;
                    case 4: HandleDiv(history); break;
                    case 5: HandleSqrt(history); break;
-                   case 6: ShowHistory(history); break;
+                   case 6: HandleExpon(history); break;
+                   case 7: ShowHistory(history); break;
                    case 0: keepGoing = false; break;  
                    default: Console.WriteLine("Invalid option, type a valid option."); break; 
                 }
@@ -33,7 +34,7 @@
         {
             Console.WriteLine("===Calculator===" +
             "\nChoose an option: " +
-            "\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Square Root\n6. History\n0. Quit");
+            "\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Square Root\n6. Exponentiation\n7. History\n0. Quit");
         }
         static bool TryReadNumber(string prompt, out double result)
         {
@@ -145,6 +146,17 @@
             ShowResult(result);
 
             AddToHistory(history, $"√{a} = {result}");
+        }
+
+        static void HandleExpon(List<string> history)
+        {
+            if (!TryReadNumber("Type base number: ", out double a)) return;
+            if (!TryReadNumber("Type exponent number: ", out double b)) return;
+
+            double result = Math.Pow(a, b); 
+            ShowResult(result);
+
+            AddToHistory(history, $"{a}^{b} = {result}");
         }
     }
 }

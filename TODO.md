@@ -12,4 +12,4 @@
 
 ## Post MVP
 [x] square root operation
-[] exponentiation operation
+[x] exponentiation operation
