@@ -19,7 +19,8 @@
                    case 2: HandleSubt(history); break;
                    case 3: HandleMult(history); break;
                    case 4: HandleDiv(history); break;
-                   case 5: ShowHistory(history); break;
+                   case 5: HandleSqrt(history); break;
+                   case 6: ShowHistory(history); break;
                    case 0: keepGoing = false; break;  
                    default: Console.WriteLine("Invalid option, type a valid option."); break; 
                 }
@@ -32,7 +33,7 @@
         {
             Console.WriteLine("===Calculator===" +
             "\nChoose an option: " +
-            "\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. History\n0. Quit");
+            "\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Square Root\n6. History\n0. Quit");
         }
         static bool TryReadNumber(string prompt, out double result)
         {
@@ -134,6 +135,16 @@
             ShowResult(result);
 
             AddToHistory(history, $"{a} / {b} = {result}");
+        }
+        
+        static void HandleSqrt(List<string> history)
+        {
+            if (!TryReadNumber("Type your number: ", out double a)) return;
+
+            double result = Math.Sqrt(a);
+            ShowResult(result);
+
+            AddToHistory(history, $"√{a} = {result}");
         }
     }
 }

@@ -11,5 +11,5 @@
 [x] history of operations
 
 ## Post MVP
-[] square root operation
+[x] square root operation
 [] exponentiation operation
